@@ -13,7 +13,7 @@ module.exports = async function authenticate(req, res, next) {
         response: {},
         errors: [{
           code: 'failed_to_find_user',
-          message: 'ユーザーの取得に失敗しました。'
+          message: 'failed to find user'
         }]
       });
     }
@@ -23,7 +23,7 @@ module.exports = async function authenticate(req, res, next) {
       response: {},
       errors: [{
         code: 'not_authenticated',
-        message: 'アクセスする権限がありません。'
+        message: 'not authenticated'
       }]
     });
   }

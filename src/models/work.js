@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
 const WorkSchema = new mongoose.Schema({
-  title: String,
-  votes: { type: Number, default: 0 },
+  workId: {unique: true, type: String, required: true},
+  workName: {type: String, required: true},
+  votedCount: { type: Number, default: 0 },
 },{
   collection: 'works'
 });

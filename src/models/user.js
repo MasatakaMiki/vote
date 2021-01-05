@@ -5,7 +5,7 @@ const saltRounds = 10
 const UserSchema = new mongoose.Schema({
   email: {unique: true, type: String, required: true},
   password: {type: String, required: true},
-  hasVotedCount: { type: Number, default: false },
+  votedCount: { type: Number, default: 0 },
 },{
   collection: 'users'
 });
